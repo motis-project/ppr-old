@@ -1,0 +1,36 @@
+[cista]
+  url=git@git.motis-project.de:lib/cista.git
+  branch=master
+  commit=dac7590689635b58bbceb385a00f80c55cac4e90
+[conf]
+  url=git@git.motis-project.de:lib/conf.git
+  branch=master
+  commit=9216a50214e8d438c166585afae7686259305e0b
+[cpptoml]
+  url=git@git.motis-project.de:pablo.hoch/cpptoml.git
+  branch=nodeps
+  commit=9898821e40549500f312a05f1272b2ba9b355081
+[net-old]
+  url=git@git.motis-project.de:lib/net-old.git
+  branch=net-old
+  commit=47e740c4dac9a03e2b959ad82570575ca67e63b0
+[osmium]
+  url=git@git.motis-project.de:lib/osmium.git
+  branch=master
+  commit=e8185d7c1644e720d8355697d39b99ff9e2299e2
+[protozero]
+  url=git@git.motis-project.de:lib/protozero.git
+  branch=tiles
+  commit=c217d7356989541e957e18e0e7fe136b3b448f94
+[rapidjson]
+  url=git@git.motis-project.de:lib/rapidjson.git
+  branch=github
+  commit=473f54c1b97711bb9e40e89bebe76e168c8755df
+[utl]
+  url=git@git.motis-project.de:lib/utl.git
+  branch=master
+  commit=254b8bee18d4cf92dae6f84eca1191f5f0601bec
+[zlib]
+  url=git@git.motis-project.de:lib/zlib.git
+  branch=master
+  commit=8e7c86d3a0e49101b9a67d74c4a07345dcb0e485
