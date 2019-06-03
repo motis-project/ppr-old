@@ -5,9 +5,9 @@
 #include "boost/geometry/geometries/geometries.hpp"
 #include "boost/geometry/index/rtree.hpp"
 
-#include "footrouting/preprocessing/int_graph/int_graph.h"
-#include "footrouting/preprocessing/int_graph/linked_crossings.h"
-#include "footrouting/preprocessing/int_graph/path.h"
+#include "ppr/preprocessing/int_graph/int_graph.h"
+#include "ppr/preprocessing/int_graph/linked_crossings.h"
+#include "ppr/preprocessing/int_graph/path.h"
 
 namespace bg = boost::geometry;
 namespace bgi = boost::geometry::index;
@@ -15,15 +15,15 @@ namespace bgi = boost::geometry::index;
 // fix for boost 1.6.0
 namespace boost::geometry::index::detail {
 template <>
-struct equals<footrouting::preprocessing::int_edge*, void> {
-  inline static bool apply(footrouting::preprocessing::int_edge* const& v1,
-                           footrouting::preprocessing::int_edge* const& v2) {
+struct equals<ppr::preprocessing::int_edge*, void> {
+  inline static bool apply(ppr::preprocessing::int_edge* const& v1,
+                           ppr::preprocessing::int_edge* const& v2) {
     return v1 == v2;
   }
 };
 }  // namespace boost::geometry::index::detail
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 using rtree_point_t = merc;
 using rtree_value_t = std::pair<segment_t, int_edge*>;
@@ -352,4 +352,4 @@ void add_linked_crossings(int_graph& ig, routing_graph& rg,
   }
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

@@ -1,7 +1,7 @@
-#include "footrouting/preprocessing/osm_graph/osm_edge.h"
-#include "footrouting/preprocessing/osm_graph/osm_node.h"
+#include "ppr/preprocessing/osm_graph/osm_edge.h"
+#include "ppr/preprocessing/osm_graph/osm_node.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 double osm_edge::angle(bool reverse) const {
   auto const direction = reverse ? from_->location_ - to_->location_
@@ -9,4 +9,4 @@ double osm_edge::angle(bool reverse) const {
   return std::atan2(direction.y(), direction.x());
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

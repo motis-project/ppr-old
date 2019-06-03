@@ -1,8 +1,8 @@
 #include <fstream>
 
-#include "footrouting/preprocessing/stats_writer.h"
+#include "ppr/preprocessing/stats_writer.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 namespace {
 
@@ -95,4 +95,4 @@ void write_stats(statistics const& s, std::string const& filename) {
   write(out, "routing.n_crossings_signals", s.routing_.n_crossings_signals_);
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

@@ -1,10 +1,10 @@
-#include "footrouting/preprocessing/osm_graph/elevation.h"
+#include "ppr/preprocessing/osm_graph/elevation.h"
 
 #include <cmath>
 
-using namespace footrouting::preprocessing::elevation;
+using namespace ppr::preprocessing::elevation;
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 void sample_elevation(osm_edge& edge, elevation::dem_source& dem,
                       double sampling_interval, elevation_statistics& stats) {
@@ -73,4 +73,4 @@ void add_elevation_data(osm_graph& og, elevation::dem_source& dem,
   }
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

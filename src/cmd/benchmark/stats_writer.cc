@@ -3,11 +3,11 @@
 #include <numeric>
 #include <string>
 
-#include "footrouting/cmd/benchmark/stats_writer.h"
+#include "ppr/cmd/benchmark/stats_writer.h"
 
-using namespace footrouting::routing;
+using namespace ppr::routing;
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 stats_writer::stats_writer(std::string const& filename)
     : csv_(filename), lines_(0) {
@@ -109,4 +109,4 @@ void stats_writer::write(routing_query const& query,
   }
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

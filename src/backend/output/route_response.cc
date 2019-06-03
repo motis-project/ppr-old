@@ -1,15 +1,15 @@
-#include "footrouting/backend/output/route_response.h"
-#include "footrouting/output/json.h"
-#include "footrouting/routing/route_steps.h"
+#include "ppr/backend/output/route_response.h"
+#include "ppr/output/json.h"
+#include "ppr/routing/route_steps.h"
 
 #include "rapidjson/prettywriter.h"
 #include "rapidjson/stringbuffer.h"
 
-using namespace footrouting;
-using namespace footrouting::routing;
-using namespace footrouting::output;
+using namespace ppr;
+using namespace ppr::routing;
+using namespace ppr::output;
 
-namespace footrouting::backend::output {
+namespace ppr::backend::output {
 
 std::string edge_type_str(edge_type const type) {
   switch (type) {
@@ -390,4 +390,4 @@ std::string routes_to_route_response(search_result const& result, bool full) {
   return sb.GetString();
 }
 
-}  // namespace footrouting::backend::output
+}  // namespace ppr::backend::output

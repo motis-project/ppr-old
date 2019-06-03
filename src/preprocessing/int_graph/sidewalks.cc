@@ -1,9 +1,9 @@
 #include <algorithm>
 #include <vector>
 
-#include "footrouting/preprocessing/int_graph/sidewalks.h"
+#include "ppr/preprocessing/int_graph/sidewalks.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 std::pair<std::vector<merc>, std::vector<merc>> generate_sidewalk_paths(
     std::vector<merc> const& way_path, double width) {
@@ -69,4 +69,4 @@ std::pair<std::vector<merc>, std::vector<merc>> generate_sidewalk_paths(
   return {left_path, right_path};
 };
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

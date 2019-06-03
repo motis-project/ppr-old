@@ -17,23 +17,23 @@
 #include "osmium/relations/relations_manager.hpp"
 #include "osmium/visitor.hpp"
 
-#include "footrouting/common/location_geometry.h"
-#include "footrouting/common/timing.h"
-#include "footrouting/preprocessing/logging.h"
-#include "footrouting/preprocessing/names.h"
-#include "footrouting/preprocessing/osm/access.h"
-#include "footrouting/preprocessing/osm/crossing.h"
-#include "footrouting/preprocessing/osm/way_info.h"
-#include "footrouting/preprocessing/osm_graph/areas.h"
-#include "footrouting/preprocessing/osm_graph/extractor.h"
-#include "footrouting/preprocessing/statistics.h"
+#include "ppr/common/location_geometry.h"
+#include "ppr/common/timing.h"
+#include "ppr/preprocessing/logging.h"
+#include "ppr/preprocessing/names.h"
+#include "ppr/preprocessing/osm/access.h"
+#include "ppr/preprocessing/osm/crossing.h"
+#include "ppr/preprocessing/osm/way_info.h"
+#include "ppr/preprocessing/osm_graph/areas.h"
+#include "ppr/preprocessing/osm_graph/extractor.h"
+#include "ppr/preprocessing/statistics.h"
 
 namespace bg = boost::geometry;
 namespace bgi = boost::geometry::index;
 
-using namespace footrouting::preprocessing::osm;
+using namespace ppr::preprocessing::osm;
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 using index_type = osmium::index::map::FlexMem<osmium::unsigned_object_id_type,
                                                osmium::Location>;
@@ -284,4 +284,4 @@ osm_graph extract(std::string const& osm_file, options const& opt,
   return og;
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

@@ -9,14 +9,14 @@
 
 #include "net/http/server/shutdown_handler.hpp"
 
-#include "footrouting/backend/http_server.h"
+#include "ppr/backend/http_server.h"
 
 using net::http::server::shutdown_handler;
 
 template <typename T>
 using shutd_hdr_ptr = std::unique_ptr<shutdown_handler<T>>;
 
-namespace footrouting::backend {
+namespace ppr::backend {
 
 auto run(boost::asio::io_service& ios) {
   return [&ios]() {
@@ -61,4 +61,4 @@ void ppr_server(routing_graph const& rg, std::string const& http_host,
   std::for_each(begin(threads), end(threads), [](std::thread& t) { t.join(); });
 }
 
-}  // namespace footrouting::backend
+}  // namespace ppr::backend

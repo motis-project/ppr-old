@@ -3,14 +3,14 @@
 #include <queue>
 #include <unordered_map>
 
-#include "footrouting/common/timing.h"
-#include "footrouting/routing/label.h"
-#include "footrouting/routing/labels_to_route.h"
-#include "footrouting/routing/pareto_dijkstra.h"
-#include "footrouting/routing/postprocessing.h"
-#include "footrouting/routing/search.h"
+#include "ppr/common/timing.h"
+#include "ppr/routing/label.h"
+#include "ppr/routing/labels_to_route.h"
+#include "ppr/routing/pareto_dijkstra.h"
+#include "ppr/routing/postprocessing.h"
+#include "ppr/routing/search.h"
 
-namespace footrouting::routing {
+namespace ppr::routing {
 
 using mapped_pt = std::pair<location, std::vector<input_pt>>;
 
@@ -133,4 +133,4 @@ search_result find_routes(routing_graph const& g, location const& start,
   return result;
 }
 
-}  // namespace footrouting::routing
+}  // namespace ppr::routing

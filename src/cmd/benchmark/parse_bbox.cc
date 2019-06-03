@@ -3,9 +3,9 @@
 #include "boost/algorithm/string.hpp"
 #include "boost/lexical_cast.hpp"
 
-#include "footrouting/cmd/benchmark/parse_bbox.h"
+#include "ppr/cmd/benchmark/parse_bbox.h"
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 std::unique_ptr<bbox> parse_bbox(std::string const& input) {
   std::vector<std::string> coords;
@@ -28,4 +28,4 @@ std::unique_ptr<bbox> parse_bbox(std::string const& input) {
   }
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

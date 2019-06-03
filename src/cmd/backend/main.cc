@@ -15,15 +15,15 @@
 #include "conf/options_parser.h"
 #include "conf/simple_config.h"
 
-#include "footrouting/backend/server.h"
-#include "footrouting/cmd/backend/prog_options.h"
-#include "footrouting/common/timing.h"
-#include "footrouting/common/verify.h"
-#include "footrouting/serialization/reader.h"
+#include "ppr/backend/server.h"
+#include "ppr/cmd/backend/prog_options.h"
+#include "ppr/common/timing.h"
+#include "ppr/common/verify.h"
+#include "ppr/serialization/reader.h"
 
-using namespace footrouting;
-using namespace footrouting::backend;
-using namespace footrouting::serialization;
+using namespace ppr;
+using namespace ppr::backend;
+using namespace ppr::serialization;
 
 int main(int argc, char* argv[]) {
   prog_options opt;

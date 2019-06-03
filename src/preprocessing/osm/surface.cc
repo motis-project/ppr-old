@@ -1,6 +1,6 @@
-#include "footrouting/preprocessing/osm/surface.h"
+#include "ppr/preprocessing/osm/surface.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 surface_type get_surface_type(char const* tag) {
   // https://wiki.openstreetmap.org/wiki/Key:surface
@@ -79,4 +79,4 @@ smoothness_type get_smoothness_type(char const* tag) {
   }
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

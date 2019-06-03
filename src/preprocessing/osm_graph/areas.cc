@@ -1,10 +1,10 @@
 #include <mutex>
 
-#include "footrouting/common/area_routing.h"
-#include "footrouting/preprocessing/osm_graph/areas.h"
-#include "footrouting/preprocessing/thread_pool.h"
+#include "ppr/common/area_routing.h"
+#include "ppr/preprocessing/osm_graph/areas.h"
+#include "ppr/preprocessing/thread_pool.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 void process_area(osm_graph& graph, osm_graph_statistics& stats, osm_area* area,
                   std::mutex& mutex) {
@@ -50,4 +50,4 @@ void process_areas(osm_graph& graph, options const& opt,
   pool.join();
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

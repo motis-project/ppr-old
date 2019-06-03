@@ -1,7 +1,7 @@
-#include "footrouting/routing/costs.h"
-#include "footrouting/routing/stairs.h"
+#include "ppr/routing/costs.h"
+#include "ppr/routing/stairs.h"
 
-namespace footrouting::routing {
+namespace ppr::routing {
 
 cost_factor const default_cost_factor;
 
@@ -136,4 +136,4 @@ edge_costs get_edge_costs(edge const* e, bool fwd,
           allowed};
 }
 
-}  // namespace footrouting::routing
+}  // namespace ppr::routing

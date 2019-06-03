@@ -1,14 +1,14 @@
 #include <iostream>
 
-#include "footrouting/common/timing.h"
-#include "footrouting/preprocessing/logging.h"
-#include "footrouting/preprocessing/osm_graph/builder.h"
-#include "footrouting/preprocessing/osm_graph/elevation.h"
-#include "footrouting/preprocessing/osm_graph/extractor.h"
+#include "ppr/common/timing.h"
+#include "ppr/preprocessing/logging.h"
+#include "ppr/preprocessing/osm_graph/builder.h"
+#include "ppr/preprocessing/osm_graph/elevation.h"
+#include "ppr/preprocessing/osm_graph/extractor.h"
 
-using namespace footrouting::preprocessing::elevation;
+using namespace ppr::preprocessing::elevation;
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 osm_graph build_osm_graph(options const& opt, statistics& stats) {
   auto const t_start = timing_now();
@@ -42,4 +42,4 @@ osm_graph build_osm_graph(options const& opt, statistics& stats) {
   return og;
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

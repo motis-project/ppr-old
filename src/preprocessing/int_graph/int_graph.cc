@@ -1,15 +1,15 @@
 #include <algorithm>
 #include <unordered_map>
 
-#include "footrouting/common/timing.h"
-#include "footrouting/preprocessing/int_graph/int_graph.h"
-#include "footrouting/preprocessing/int_graph/sidewalks.h"
-#include "footrouting/preprocessing/logging.h"
-#include "footrouting/preprocessing/osm_graph/move_crossings.h"
-#include "footrouting/preprocessing/osm_graph/osm_graph.h"
-#include "footrouting/preprocessing/osm_graph/parallel_streets.h"
+#include "ppr/common/timing.h"
+#include "ppr/preprocessing/int_graph/int_graph.h"
+#include "ppr/preprocessing/int_graph/sidewalks.h"
+#include "ppr/preprocessing/logging.h"
+#include "ppr/preprocessing/osm_graph/move_crossings.h"
+#include "ppr/preprocessing/osm_graph/osm_graph.h"
+#include "ppr/preprocessing/osm_graph/parallel_streets.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 struct int_graph_builder {
   int_graph_builder(osm_graph& og, int_graph& ig, options const& opt,
@@ -214,4 +214,4 @@ int_graph build_int_graph(osm_graph& og, options const& opt,
   return ig;
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

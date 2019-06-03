@@ -1,8 +1,8 @@
 #include <cstring>
 
-#include "footrouting/preprocessing/osm/crossing.h"
+#include "ppr/preprocessing/osm/crossing.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 crossing_type::crossing_type get_crossing_type(osmium::TagList const& tags) {
   auto const crossing = tags["crossing"];
@@ -30,4 +30,4 @@ crossing_type::crossing_type get_crossing_type(osmium::TagList const& tags) {
   }
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

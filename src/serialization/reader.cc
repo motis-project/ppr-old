@@ -1,13 +1,13 @@
-#include "footrouting/serialization/reader.h"
+#include "ppr/serialization/reader.h"
 
 #include "boost/filesystem.hpp"
 
-#include "footrouting/preprocessing/names.h"
-#include "footrouting/serialization/mode.h"
+#include "ppr/preprocessing/names.h"
+#include "ppr/serialization/mode.h"
 
 namespace fs = boost::filesystem;
 
-namespace footrouting::serialization {
+namespace ppr::serialization {
 
 void read_routing_graph(routing_graph& rg, std::string const& filename) {
   if (!fs::exists(filename)) {
@@ -19,4 +19,4 @@ void read_routing_graph(routing_graph& rg, std::string const& filename) {
   rg.filename_ = filename;
 }
 
-}  // namespace footrouting::serialization
+}  // namespace ppr::serialization

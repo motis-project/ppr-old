@@ -1,9 +1,9 @@
-#include "footrouting/preprocessing/statistics.h"
-#include "footrouting/common/routing_graph.h"
-#include "footrouting/preprocessing/int_graph/int_graph.h"
-#include "footrouting/preprocessing/osm_graph/osm_graph.h"
+#include "ppr/preprocessing/statistics.h"
+#include "ppr/common/routing_graph.h"
+#include "ppr/preprocessing/int_graph/int_graph.h"
+#include "ppr/preprocessing/osm_graph/osm_graph.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 namespace {
 
@@ -70,4 +70,4 @@ void collect_stats(routing_graph_statistics& stats, routing_graph const& rg) {
   }
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

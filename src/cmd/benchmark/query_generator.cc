@@ -2,16 +2,16 @@
 #include "boost/geometry/algorithms/envelope.hpp"
 #include "boost/geometry/geometries/geometries.hpp"
 
-#include "footrouting/cmd/benchmark/query_generator.h"
-#include "footrouting/common/geometry/merc.h"
-#include "footrouting/common/math.h"
+#include "ppr/cmd/benchmark/query_generator.h"
+#include "ppr/common/geometry/merc.h"
+#include "ppr/common/math.h"
 
 namespace bg = boost::geometry;
 
-using namespace footrouting;
-using namespace footrouting::routing;
+using namespace ppr;
+using namespace ppr::routing;
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 location query_generator::random_point_near(location const& ref,
                                             double max_dist) {
@@ -112,4 +112,4 @@ routing_query query_generator::with_radius_factor(routing_query const& base,
   return query;
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

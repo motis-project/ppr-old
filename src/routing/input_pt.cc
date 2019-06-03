@@ -8,13 +8,13 @@
 #include "boost/geometry/geometries/point_xy.hpp"
 #include "boost/geometry/geometry.hpp"
 
-#include "footrouting/common/geometry/path_conversion.h"
-#include "footrouting/routing/input_pt.h"
+#include "ppr/common/geometry/path_conversion.h"
+#include "ppr/routing/input_pt.h"
 
 namespace bg = boost::geometry;
 namespace bgi = boost::geometry::index;
 
-namespace footrouting::routing {
+namespace ppr::routing {
 
 location nearest_pt_on_segment(location const& loc, location const& seg_from,
                                location const& seg_to) {
@@ -221,4 +221,4 @@ std::vector<input_pt> nearest_points(routing_graph const& g,
   return pts;
 }
 
-}  // namespace footrouting::routing
+}  // namespace ppr::routing

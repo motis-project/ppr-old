@@ -2,10 +2,10 @@
 #include <algorithm>
 #include <functional>
 
-#include "footrouting/common/timing.h"
-#include "footrouting/routing/postprocessing.h"
+#include "ppr/common/timing.h"
+#include "ppr/routing/postprocessing.h"
 
-namespace footrouting::routing {
+namespace ppr::routing {
 
 bool round_values(route& r, search_profile const& profile, double min_dur,
                   double min_acc, double div_size_dur, double div_size_acc,
@@ -171,4 +171,4 @@ void postprocess_result(search_result& result, search_profile const& profile) {
   result.stats_.d_postprocessing_ = ms_since(t_start);
 }
 
-}  // namespace footrouting::routing
+}  // namespace ppr::routing

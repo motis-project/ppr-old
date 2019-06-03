@@ -5,13 +5,13 @@
 #include "boost/algorithm/string.hpp"
 #include "boost/geometry/geometries/box.hpp"
 
-#include "footrouting/cmd/benchmark/stations.h"
-#include "footrouting/common/geometry/merc.h"
+#include "ppr/cmd/benchmark/stations.h"
+#include "ppr/common/geometry/merc.h"
 
 namespace bg = boost::geometry;
 namespace bgi = boost::geometry::index;
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 bool stations::load(std::string const& file, bounds const& bds) {
   // read stations file
@@ -60,4 +60,4 @@ std::vector<location> stations::stations_near(location const& ref,
   return results;
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

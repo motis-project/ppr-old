@@ -1,25 +1,25 @@
 #include "net/http/server/query_router.hpp"
 #include "net/http/server/server.hpp"
 
-#include "footrouting/backend/http_server.h"
-#include "footrouting/backend/output/graph_response.h"
-#include "footrouting/backend/output/route_response.h"
-#include "footrouting/backend/params.h"
-#include "footrouting/backend/request_parser.h"
-#include "footrouting/profiles/json.h"
-#include "footrouting/profiles/parse_search_profile.h"
-#include "footrouting/routing/search.h"
+#include "ppr/backend/http_server.h"
+#include "ppr/backend/output/graph_response.h"
+#include "ppr/backend/output/route_response.h"
+#include "ppr/backend/params.h"
+#include "ppr/backend/request_parser.h"
+#include "ppr/profiles/json.h"
+#include "ppr/profiles/parse_search_profile.h"
+#include "ppr/routing/search.h"
 
 using namespace net::http::server;
 namespace srv = net::http::server;
 
 namespace bgi = boost::geometry::index;
 
-using namespace footrouting::backend::output;
-using namespace footrouting::routing;
-using namespace footrouting::profiles;
+using namespace ppr::backend::output;
+using namespace ppr::routing;
+using namespace ppr::profiles;
 
-namespace footrouting::backend {
+namespace ppr::backend {
 
 void add_cors_cache(reply& rep) {
   rep.headers.emplace_back("Access-Control-Max-Age", "3600");
@@ -184,4 +184,4 @@ void http_server::listen(std::string const& host, std::string const& port) {
 
 void http_server::stop() { impl_->stop(); }
 
-}  // namespace footrouting::backend
+}  // namespace ppr::backend

@@ -2,11 +2,11 @@
 #include <queue>
 #include <unordered_map>
 
-#include "footrouting/common/routing_graph.h"
-#include "footrouting/preprocessing/routing_graph/crossing_detour.h"
-#include "footrouting/preprocessing/thread_pool.h"
+#include "ppr/common/routing_graph.h"
+#include "ppr/preprocessing/routing_graph/crossing_detour.h"
+#include "ppr/preprocessing/thread_pool.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 namespace {
 
@@ -91,4 +91,4 @@ void calc_crossing_detours(routing_graph& graph, options const& opt) {
   pool.join();
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

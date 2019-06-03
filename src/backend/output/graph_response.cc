@@ -1,15 +1,15 @@
 #include <unordered_set>
 
-#include "footrouting/backend/output/graph_response.h"
-#include "footrouting/output/geojson/graph.h"
+#include "ppr/backend/output/graph_response.h"
+#include "ppr/output/geojson/graph.h"
 
 #include "rapidjson/prettywriter.h"
 #include "rapidjson/stringbuffer.h"
 
-using namespace footrouting;
-using namespace footrouting::output;
+using namespace ppr;
+using namespace ppr::output;
 
-namespace footrouting::backend::output {
+namespace ppr::backend::output {
 
 std::string to_graph_response(
     std::vector<routing_graph::edge_rtree_value_type> const& edge_results,
@@ -52,4 +52,4 @@ std::string to_graph_response(
   return sb.GetString();
 }
 
-}  // namespace footrouting::backend::output
+}  // namespace ppr::backend::output

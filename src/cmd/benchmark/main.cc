@@ -14,19 +14,19 @@
 #include "conf/options_parser.h"
 #include "conf/simple_config.h"
 
-#include "footrouting/cmd/benchmark/bench_spec.h"
-#include "footrouting/cmd/benchmark/benchmark.h"
-#include "footrouting/cmd/benchmark/parse_bbox.h"
-#include "footrouting/cmd/benchmark/parse_poly.h"
-#include "footrouting/cmd/benchmark/prog_options.h"
-#include "footrouting/cmd/benchmark/query_generator.h"
-#include "footrouting/cmd/benchmark/stations.h"
-#include "footrouting/cmd/benchmark/stats_writer.h"
-#include "footrouting/serialization/reader.h"
+#include "ppr/cmd/benchmark/bench_spec.h"
+#include "ppr/cmd/benchmark/benchmark.h"
+#include "ppr/cmd/benchmark/parse_bbox.h"
+#include "ppr/cmd/benchmark/parse_poly.h"
+#include "ppr/cmd/benchmark/prog_options.h"
+#include "ppr/cmd/benchmark/query_generator.h"
+#include "ppr/cmd/benchmark/stations.h"
+#include "ppr/cmd/benchmark/stats_writer.h"
+#include "ppr/serialization/reader.h"
 
-using namespace footrouting;
-using namespace footrouting::benchmark;
-using namespace footrouting::serialization;
+using namespace ppr;
+using namespace ppr::benchmark;
+using namespace ppr::serialization;
 
 std::unique_ptr<bounds> parse_bounds(prog_options const& opt) {
   if (!opt.bbox_.empty()) {

@@ -4,13 +4,13 @@
 #include "boost/geometry/geometries/geometries.hpp"
 #include "boost/geometry/index/rtree.hpp"
 
-#include "footrouting/preprocessing/geo_util.h"
-#include "footrouting/preprocessing/osm_graph/parallel_streets.h"
+#include "ppr/preprocessing/geo_util.h"
+#include "ppr/preprocessing/osm_graph/parallel_streets.h"
 
 namespace bg = boost::geometry;
 namespace bgi = boost::geometry::index;
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 using segment_t = bg::model::segment<merc>;
 using box_t = bg::model::box<merc>;
@@ -229,4 +229,4 @@ void detect_parallel_streets(osm_graph& og, osm_graph_statistics& stats) {
   }
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

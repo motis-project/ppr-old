@@ -8,15 +8,15 @@
 
 #include "conf/options_parser.h"
 
-#include "footrouting/backend/server.h"
-#include "footrouting/cmd/backend/prog_options.h"
-#include "footrouting/cmd/preprocess/prog_options.h"
-#include "footrouting/common/timing.h"
-#include "footrouting/preprocessing/preprocessing.h"
+#include "ppr/backend/server.h"
+#include "ppr/cmd/backend/prog_options.h"
+#include "ppr/cmd/preprocess/prog_options.h"
+#include "ppr/common/timing.h"
+#include "ppr/preprocessing/preprocessing.h"
 
-using namespace footrouting;
-using namespace footrouting::backend;
-using namespace footrouting::preprocessing;
+using namespace ppr;
+using namespace ppr::backend;
+using namespace ppr::preprocessing;
 
 namespace fs = boost::filesystem;
 

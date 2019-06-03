@@ -2,13 +2,13 @@
 
 #include "rapidjson/document.h"
 
-#include "footrouting/profiles/json.h"
-#include "footrouting/profiles/parse_search_profile.h"
+#include "ppr/profiles/json.h"
+#include "ppr/profiles/parse_search_profile.h"
 
 using namespace rapidjson;
-using namespace footrouting::routing;
+using namespace ppr::routing;
 
-namespace footrouting::profiles {
+namespace ppr::profiles {
 
 inline void get_usage_restriction(routing::usage_restriction& field,
                                   rapidjson::Value const& doc,
@@ -143,4 +143,4 @@ void parse_search_profile(search_profile& profile,
   get_cost_factor(profile.elevation_down_cost_, root, "elevation_down_cost");
 }
 
-}  // namespace footrouting::profiles
+}  // namespace ppr::profiles

@@ -1,9 +1,9 @@
 #include <algorithm>
 
-#include "footrouting/routing/route.h"
-#include "footrouting/routing/route_steps.h"
+#include "ppr/routing/route.h"
+#include "ppr/routing/route_steps.h"
 
-namespace footrouting::routing {
+namespace ppr::routing {
 
 step_type to_step_type(edge_type et) {
   switch (et) {
@@ -104,4 +104,4 @@ std::vector<location> get_route_path(route const& r) {
   return path;
 }
 
-}  // namespace footrouting::routing
+}  // namespace ppr::routing

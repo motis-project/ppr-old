@@ -1,9 +1,9 @@
 #include <functional>
 
-#include "footrouting/preprocessing/osm/parse.h"
-#include "footrouting/preprocessing/osm/width.h"
+#include "ppr/preprocessing/osm/parse.h"
+#include "ppr/preprocessing/osm/width.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 double get_actual_width(osmium::TagList const& tags, double def) {
   // http://wiki.openstreetmap.org/wiki/Key:width
@@ -40,4 +40,4 @@ double get_render_width(edge_type edge, street_type street) {
   }
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

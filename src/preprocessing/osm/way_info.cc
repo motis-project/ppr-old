@@ -1,19 +1,19 @@
 #include <cstring>
 
-#include "footrouting/preprocessing/clamp.h"
-#include "footrouting/preprocessing/names.h"
-#include "footrouting/preprocessing/osm/access.h"
-#include "footrouting/preprocessing/osm/crossing.h"
-#include "footrouting/preprocessing/osm/handrail.h"
-#include "footrouting/preprocessing/osm/layer.h"
-#include "footrouting/preprocessing/osm/parse.h"
-#include "footrouting/preprocessing/osm/ramp.h"
-#include "footrouting/preprocessing/osm/surface.h"
-#include "footrouting/preprocessing/osm/way_info.h"
-#include "footrouting/preprocessing/osm/wheelchair.h"
-#include "footrouting/preprocessing/osm/width.h"
+#include "ppr/preprocessing/clamp.h"
+#include "ppr/preprocessing/names.h"
+#include "ppr/preprocessing/osm/access.h"
+#include "ppr/preprocessing/osm/crossing.h"
+#include "ppr/preprocessing/osm/handrail.h"
+#include "ppr/preprocessing/osm/layer.h"
+#include "ppr/preprocessing/osm/parse.h"
+#include "ppr/preprocessing/osm/ramp.h"
+#include "ppr/preprocessing/osm/surface.h"
+#include "ppr/preprocessing/osm/way_info.h"
+#include "ppr/preprocessing/osm/wheelchair.h"
+#include "ppr/preprocessing/osm/width.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 bool is_street_with_sidewalks(street_type const street) {
   return street == street_type::RESIDENTIAL || street == street_type::SERVICE ||
@@ -228,4 +228,4 @@ way_info get_way_info(osmium::Way const& way, osm_graph& graph) {
   }
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

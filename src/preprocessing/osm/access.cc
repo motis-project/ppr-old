@@ -1,8 +1,8 @@
 #include <cstring>
 
-#include "footrouting/preprocessing/osm/access.h"
+#include "ppr/preprocessing/osm/access.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 bool access_allowed(char const* access, bool def) {
   if (access == nullptr || strlen(access) == 0) {
@@ -27,4 +27,4 @@ bool access_allowed(osmium::TagList const& tags, bool def) {
   return access_allowed(access, def);
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

@@ -5,11 +5,11 @@
 #include "boost/algorithm/string.hpp"
 #include "boost/geometry.hpp"
 
-#include "footrouting/cmd/benchmark/parse_poly.h"
+#include "ppr/cmd/benchmark/parse_poly.h"
 
 namespace bg = boost::geometry;
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 namespace {
 enum class state { NAME, MULTIPOLY, OUTER_RING, INNER_RING };
@@ -79,4 +79,4 @@ std::unique_ptr<poly> parse_poly(std::string const& filename) {
   return std::make_unique<poly>(multipoly);
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

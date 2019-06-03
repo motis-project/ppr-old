@@ -6,18 +6,18 @@
 
 #include "boost/geometry/geometry.hpp"
 
-#include "footrouting/common/geometry/path_conversion.h"
-#include "footrouting/common/location_geometry.h"
-#include "footrouting/common/timing.h"
-#include "footrouting/preprocessing/int_graph/linked_crossings.h"
-#include "footrouting/preprocessing/int_graph/oriented_int_edge.h"
-#include "footrouting/preprocessing/int_graph/path.h"
-#include "footrouting/preprocessing/logging.h"
-#include "footrouting/preprocessing/osm_graph/builder.h"
-#include "footrouting/preprocessing/preprocessing.h"
-#include "footrouting/preprocessing/routing_graph/crossing_detour.h"
+#include "ppr/common/geometry/path_conversion.h"
+#include "ppr/common/location_geometry.h"
+#include "ppr/common/timing.h"
+#include "ppr/preprocessing/int_graph/linked_crossings.h"
+#include "ppr/preprocessing/int_graph/oriented_int_edge.h"
+#include "ppr/preprocessing/int_graph/path.h"
+#include "ppr/preprocessing/logging.h"
+#include "ppr/preprocessing/osm_graph/builder.h"
+#include "ppr/preprocessing/preprocessing.h"
+#include "ppr/preprocessing/routing_graph/crossing_detour.h"
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 struct preprocessor {
   preprocessor(int_graph& ig, options const& opt, statistics& stats)
@@ -581,4 +581,4 @@ routing_graph build_routing_graph(options const& opt, statistics& stats) {
   return build_routing_graph(ig, opt, stats);
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

@@ -10,7 +10,7 @@
 #include "boost/filesystem.hpp"
 #include "boost/iostreams/device/mapped_file.hpp"
 
-#include "footrouting/preprocessing/elevation/dem_grid.h"
+#include "ppr/preprocessing/elevation/dem_grid.h"
 
 // EHdr / BIL File Format:
 // http://www.gdal.org/frmt_various.html#EHdr
@@ -20,7 +20,7 @@
 namespace fs = boost::filesystem;
 namespace ios = boost::iostreams;
 
-namespace footrouting::preprocessing::elevation {
+namespace ppr::preprocessing::elevation {
 
 using str_map = std::unordered_map<std::string, std::string>;
 using dem_exception = std::runtime_error;
@@ -246,4 +246,4 @@ pixel_value dem_grid::get_raw(location const& loc) const {
 
 pixel_type dem_grid::get_pixel_type() const { return impl_->pixel_type_; }
 
-}  // namespace footrouting::preprocessing::elevation
+}  // namespace ppr::preprocessing::elevation

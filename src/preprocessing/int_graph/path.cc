@@ -1,12 +1,12 @@
 #include <algorithm>
 #include <iostream>
 
-#include "footrouting/preprocessing/geo_util.h"
-#include "footrouting/preprocessing/int_graph/path.h"
+#include "ppr/preprocessing/geo_util.h"
+#include "ppr/preprocessing/int_graph/path.h"
 
 namespace bg = boost::geometry;
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 static constexpr double EXT_JOIN_DISTANCE = 30.0;
 
@@ -317,4 +317,4 @@ merc join_footpath_with_street(std::vector<merc>& foot_path, bool foot_reverse,
   return intersection;
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

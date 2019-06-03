@@ -1,13 +1,13 @@
 #include <algorithm>
 #include <iostream>
 
-#include "footrouting/preprocessing/geo_util.h"
-#include "footrouting/preprocessing/junction.h"
-#include "footrouting/preprocessing/osm_graph/move_crossings.h"
+#include "ppr/preprocessing/geo_util.h"
+#include "ppr/preprocessing/junction.h"
+#include "ppr/preprocessing/osm_graph/move_crossings.h"
 
 namespace bg = boost::geometry;
 
-namespace footrouting::preprocessing {
+namespace ppr::preprocessing {
 
 namespace {
 
@@ -92,4 +92,4 @@ void move_crossings(osm_graph& og, osm_graph_statistics& stats) {
   }
 }
 
-}  // namespace footrouting::preprocessing
+}  // namespace ppr::preprocessing

@@ -5,13 +5,13 @@
 #include "boost/filesystem.hpp"
 #include "cpptoml.h"
 
-#include "footrouting/cmd/benchmark/bench_spec.h"
-#include "footrouting/profiles/parse_search_profile.h"
+#include "ppr/cmd/benchmark/bench_spec.h"
+#include "ppr/profiles/parse_search_profile.h"
 
-using namespace footrouting;
-using namespace footrouting::routing;
+using namespace ppr;
+using namespace ppr::routing;
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 namespace {
 
@@ -27,7 +27,7 @@ named_profile load_search_profile(std::string const& filename) {
   if (boost::starts_with(name, "sp_")) {
     name = name.substr(3);
   }
-  return {name, footrouting::profiles::parse_search_profile(ss.str())};
+  return {name, ppr::profiles::parse_search_profile(ss.str())};
 }
 
 named_profile get_profile(
@@ -204,4 +204,4 @@ std::vector<bench_spec> read_bench_specs(std::string const& filename,
   return specs;
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

@@ -8,18 +8,18 @@
 
 #include "conf/options_parser.h"
 
-#include "footrouting/cmd/preprocess/prog_options.h"
-#include "footrouting/common/timing.h"
-#include "footrouting/common/verify.h"
-#include "footrouting/preprocessing/preprocessing.h"
-#include "footrouting/preprocessing/statistics.h"
-#include "footrouting/preprocessing/stats_writer.h"
-#include "footrouting/serialization/reader.h"
-#include "footrouting/serialization/writer.h"
+#include "ppr/cmd/preprocess/prog_options.h"
+#include "ppr/common/timing.h"
+#include "ppr/common/verify.h"
+#include "ppr/preprocessing/preprocessing.h"
+#include "ppr/preprocessing/statistics.h"
+#include "ppr/preprocessing/stats_writer.h"
+#include "ppr/serialization/reader.h"
+#include "ppr/serialization/writer.h"
 
-using namespace footrouting;
-using namespace footrouting::preprocessing;
-using namespace footrouting::serialization;
+using namespace ppr;
+using namespace ppr::preprocessing;
+using namespace ppr::serialization;
 
 namespace fs = boost::filesystem;
 

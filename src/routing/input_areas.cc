@@ -4,13 +4,13 @@
 #include "boost/geometry/algorithms/covered_by.hpp"
 #include "boost/geometry/algorithms/union.hpp"
 
-#include "footrouting/routing/input_areas.h"
+#include "ppr/routing/input_areas.h"
 
-#include "footrouting/common/area_routing.h"
+#include "ppr/common/area_routing.h"
 
 namespace bg = boost::geometry;
 
-namespace footrouting::routing {
+namespace ppr::routing {
 
 node* create_edge_to_area(input_pt const& pt, node* input_node,
                           additional_edges& additional) {
@@ -118,4 +118,4 @@ void create_area_edges(additional_edges& additional) {
   check_adjacent_areas(additional);
 }
 
-}  // namespace footrouting::routing
+}  // namespace ppr::routing

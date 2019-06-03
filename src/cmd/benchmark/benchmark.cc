@@ -7,13 +7,13 @@
 #include <thread>
 #include <vector>
 
-#include "footrouting/cmd/benchmark/benchmark.h"
-#include "footrouting/cmd/benchmark/query_generator.h"
-#include "footrouting/cmd/benchmark/stats_writer.h"
+#include "ppr/cmd/benchmark/benchmark.h"
+#include "ppr/cmd/benchmark/query_generator.h"
+#include "ppr/cmd/benchmark/stats_writer.h"
 
-using footrouting::routing::search_result;
+using ppr::routing::search_result;
 
-namespace footrouting::benchmark {
+namespace ppr::benchmark {
 
 constexpr std::array<double, 5> EVAL_RADIUS_FACTORS{0.9, 0.85, 0.8, 0.7, 0.6};
 
@@ -173,4 +173,4 @@ void run_benchmark(routing_graph const& rg, prog_options const& opt,
   std::cout << std::endl;
 }
 
-}  // namespace footrouting::benchmark
+}  // namespace ppr::benchmark

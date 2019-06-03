@@ -1,9 +1,9 @@
 #include <cstring>
 #include <sstream>
 
-#include "footrouting/preprocessing/osm/parse.h"
+#include "ppr/preprocessing/osm/parse.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 double parse_length(char const* str, double def) {
   // http://wiki.openstreetmap.org/wiki/Map_Features/Units
@@ -56,4 +56,4 @@ int parse_incline(char const* str) {
   }
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

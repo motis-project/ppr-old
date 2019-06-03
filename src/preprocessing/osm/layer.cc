@@ -2,10 +2,10 @@
 #include <limits>
 #include <sstream>
 
-#include "footrouting/preprocessing/osm/layer.h"
-#include "footrouting/preprocessing/osm/parse.h"
+#include "ppr/preprocessing/osm/layer.h"
+#include "ppr/preprocessing/osm/parse.h"
 
-namespace footrouting::preprocessing::osm {
+namespace ppr::preprocessing::osm {
 
 int8_t get_layer(osmium::TagList const& tags) {
   auto tag = tags["layer"];
@@ -19,4 +19,4 @@ int8_t get_layer(osmium::TagList const& tags) {
   }
 }
 
-}  // namespace footrouting::preprocessing::osm
+}  // namespace ppr::preprocessing::osm

@@ -3,12 +3,12 @@
 #include "boost/algorithm/string/case_conv.hpp"
 #include "boost/filesystem.hpp"
 
-#include "footrouting/preprocessing/elevation/dem_grid.h"
-#include "footrouting/preprocessing/elevation/dem_source.h"
+#include "ppr/preprocessing/elevation/dem_grid.h"
+#include "ppr/preprocessing/elevation/dem_source.h"
 
 namespace fs = boost::filesystem;
 
-namespace footrouting::preprocessing::elevation {
+namespace ppr::preprocessing::elevation {
 
 struct dem_source::impl {
   impl() = default;
@@ -55,4 +55,4 @@ elevation_t dem_source::get(location const& loc) const {
   return impl_->get(loc);
 }
 
-}  // namespace footrouting::preprocessing::elevation
+}  // namespace ppr::preprocessing::elevation
