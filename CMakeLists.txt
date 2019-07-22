@@ -4,7 +4,7 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX
         ${CMAKE_CURRENT_SOURCE_DIR}/cmake/cxx_flag_overrides.cmake)
 
 cmake_minimum_required(VERSION 3.0)
-project(footrouting)
+project(ppr)
 
 # Quickfix for GCC 7
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
