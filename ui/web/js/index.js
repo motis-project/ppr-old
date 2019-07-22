@@ -98,8 +98,18 @@ var routingControl = L.Routing.control({
     ],
     language: 'de',
     router: footRouting,
-    geocoder: L.Control.Geocoder.nominatim({
-        serviceUrl: 'https://nominatim.openstreetmap.org/'
+    plan: L.Routing.plan([], {
+        geocoder: L.Control.Geocoder.latLng({
+            next: L.Control.Geocoder.nominatim({
+                serviceUrl: 'https://nominatim.openstreetmap.org/'
+            }),
+        }),
+        waypointNameFallback: function(latLng) {
+            var lat = (Math.round(Math.abs(latLng.lat) * 1000000) / 1000000).toString(),
+                lng = (Math.round(Math.abs(latLng.lng) * 1000000) / 1000000).toString();
+            return  lat + ', ' +  lng;
+        },
+        maxGeocoderTolerance: 50
     }),
     routeWhileDragging: true,
     routeDragInterval: 50,
