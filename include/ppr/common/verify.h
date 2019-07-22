@@ -27,6 +27,10 @@ inline bool verify_graph(routing_graph const& rg) {
                   << ", location=" << e->from_->location_ << std::endl;
         std::cerr << "  to: osm node id=" << e->to_->osm_id_
                   << ", location=" << e->to_->location_ << std::endl;
+        std::cerr << "  path: \n";
+        for (auto const& l : e->path_) {
+          std::cerr << "    " << l << "\n";
+        }
         ok = false;
       }
     }

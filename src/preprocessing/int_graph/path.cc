@@ -190,6 +190,9 @@ segment_t get_incoming_segment(std::vector<merc>& path, bool reverse,
 
 void extend_path(std::vector<merc>& path, bool reverse, double distance) {
   auto seg = get_incoming_segment(path, reverse, distance);
+  if (std::get<1>(seg).isnan()) {
+    return;
+  }
   add_point_to_path(path, {bg::get<1, 0>(seg), bg::get<1, 1>(seg)}, reverse);
 }
 

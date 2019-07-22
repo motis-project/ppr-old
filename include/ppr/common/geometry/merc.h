@@ -48,6 +48,8 @@ struct merc {
     y_ -= rhs.y_;
   }
 
+  inline bool isnan() const { return std::isnan(x_) || std::isnan(y_); }
+
   double x_;
   double y_;
 };
