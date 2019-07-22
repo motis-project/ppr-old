@@ -118,6 +118,9 @@ void calc_visiblity(visibility_graph<Area>& vg,
     }
     auto const a_loc = get_merc(a);
     auto const b_loc = get_merc(b);
+    if (a_loc == b_loc) {
+      continue;
+    }
     auto seg = merc_segment_t{a_loc, b_loc};
     shorten_segment(seg, 0.5);
     area_polygon_t seg_poly{{seg.first, seg.second, seg.first}};
@@ -182,6 +185,9 @@ void make_vg_edges(visibility_graph<Node> const& vg, MakeEdgeFn make_edge) {
         auto const next_node = vg.next_matrix_.at(u, j);
         assert(u < vg.nodes_.size() && vg.nodes_[u]);
         assert(next_node < vg.nodes_.size() && vg.nodes_[next_node]);
+        if (next_node == std::numeric_limits<uint16_t>::max()) {
+          break;
+        }
         make_edge(u, next_node);
         u = next_node;
       }
